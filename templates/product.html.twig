@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+
+{% block product %}
+
+<div class="container" style="margin-top: 70px">
+
+<div class="card mb-3" >
+
+    {% for products in product %}
+        <img class="card-img-top" src="{{ products.image }}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ products.name }}</h5>
+            <p class="card-text">{{ products.text }}</p>
+
+        </div>
+    {% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}
+
+
